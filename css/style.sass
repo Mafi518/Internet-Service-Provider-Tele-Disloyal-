@@ -1,0 +1,755 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:700|Roboto:400,700|Rubik:700&display=swap&subset=cyrillic')
+@import url('normalize.css')
+body
+    background-color: #242B33
+    font-family: 'Roboto', sans-serif
+    color: #fff
+    font-size: 18px
+    font-weight: 400
+    box-sizing: border-box
+a
+    text-decoration: none
+    color: #D4C17F
+section, .footer
+    max-width: 1274px
+    margin: 0 auto
+    padding: 0 10px 0 10px
+input, textarea
+    outline: none
+    color: #fff
+input, textarea
+    &:focus::-webkit-input-placeholder
+        transition: color 0.2s ease
+        color: transparent
+header
+    background: url(../img/header-bg.jpg) no-repeat
+    background-size: cover
+    background-position: center
+    height: 100vh
+mark
+    background-color: transparent
+    color: #D4C17F
+%title
+    font-size: 54px
+    color: #D4C17F
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    line-height: 95.5%
+    font-family: 'Rubik', sans-serif
+    margin-bottom: 100px
+    margin-top: 150px
+.other
+    margin-top: 40px
+    display: flex
+    a
+        margin-right: 30px
+.accent
+    color: #D4C17F
+.title
+    @extend %title
+.header-navbar
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 50px
+.logo
+    display: flex
+    align-items: center
+    font-family: 'Nunito', sans-serif
+    letter-spacing: 0.06em
+    font-size: 32px
+    cursor: pointer
+    img
+        margin-right: 30px
+.menu-list
+    display: flex
+    a + a
+        margin-left: 30px
+    .menu-link
+        color: #fff
+#burger-icon
+    display: none
+.burger-label
+    display: none
+.header-info__block
+    display: flex
+    margin-top: 170px
+    position: relative
+    height: 580px
+    .mouse-down
+        content: ''
+        margin: 0 auto
+        position: absolute
+        width: 24px
+        height: 59px
+        background: url(../img/Mousedown.svg) no-repeat
+        bottom: 0
+        right: 0
+        left: 0
+        animation-name: mouseDown
+        animation-duration: 850ms
+        animation-timing-function: linear
+        animation-iteration-count: infinite
+        animation-direction: alternate
+@keyframes mouseDown
+    0%
+        bottom: 0px
+    100%
+        bottom: 30px
+
+.social-networks
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 426px
+.line
+    width: 2px
+    height: 425px
+    background-color: #D4C17F
+    margin: 0 30px 0 30px
+.header-info
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    max-width: 741px
+    .title
+        font-size: 74px
+        @extend %title
+        margin-bottom: 40px
+        margin-top: 0
+    .subtitle
+        max-width: 640px
+        line-height: 21px
+    .cta-button 
+        position: relative
+        padding: 23px 67px
+        transition: 0.5s
+        background-color: transparent
+        text-transform: uppercase
+        color: #D4C17F
+        margin-top: 68px
+        outline: none
+        overflow: hidden
+        cursor: pointer
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 20px
+            height: 20px
+            border-top: 2px solid #D4C17F
+            border-left: 2px solid #D4C17F
+            transition: 0.8s
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            right: 0
+            width: 20px
+            height: 20px
+            border-bottom: 2px solid #D4C17F
+            border-right: 2px solid #D4C17F
+            transition: 0.8s
+        &:hover
+            box-shadow: 0px 0px 20px #D4C17F
+            transition-delay: 0.6s
+            &::before, &::after
+                width: 100%
+                height: 100%
+.advantage-list
+    display: flex
+    justify-content: space-between
+.advantage
+    display: flex
+    align-items: flex-end
+    &:nth-child(1)
+        max-width: 375px
+    &:nth-child(2)
+        max-width: 403px
+    &:nth-child(3)
+        max-width: 327px
+    img
+        margin-right: 33px
+.popular-offer
+    
+.offer-list
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+.offer-card
+    display: flex
+    flex-direction: column
+    outline: none
+    align-items: center
+    overflow: hidden
+    padding-bottom: 35px
+    box-shadow: 0px 0px 8px rgba(212, 193, 127, 0.4)
+    border-radius: 20px
+    margin: 5px 10px 12px
+    img
+        padding: 17px 63px
+        background-color: #D4C17F
+        width: 100%
+    h3
+        color: #D4C17F
+        font-size: 30px
+.offer-button
+    padding: 18px 114px
+    background-color: transparent
+    text-transform: uppercase
+    color: #D4C17F
+    cursor: pointer
+    position: relative
+    overflow: hidden
+    transition: 0.5s
+    margin-top: 40px
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 20px
+        height: 20px
+        border-top: 2px solid #D4C17F
+        border-left: 2px solid #D4C17F
+        transition: 0.8s
+    &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 20px
+        height: 20px
+        border-bottom: 2px solid #D4C17F
+        border-right: 2px solid #D4C17F
+        transition: 0.8s
+    &:hover
+        box-shadow: 0px 0px 20px #D4C17F
+        transition-delay: 0.7s
+        &::before, &::after
+            width: 100%
+            height: 100%
+.how-work-list
+    display: flex
+    justify-content: space-between
+.how-work-card
+    position: relative
+    font-size: 22px
+    span
+        color: #D4C17F
+    &:nth-child(1)
+        max-width: 229px
+        p
+            padding-left: 16px
+        a
+            text-decoration: underline
+        &::before
+            content: '01'
+            position: absolute
+            font-size: 54px
+            font-family: 'Rubik', sans-serif
+            color: #D4C17F
+            opacity: 0.3
+            bottom: 40px
+    &:nth-child(2)
+        max-width: 231px
+        p
+            padding-left: 16px
+        &::before
+            content: '02'
+            position: absolute
+            font-size: 54px
+            font-family: 'Rubik', sans-serif
+            color: #D4C17F
+            opacity: 0.3
+            bottom: 40px
+    &:nth-child(3)
+        max-width: 307px
+        p
+            padding-left: 16px
+        &::before
+            content: '03'
+            position: absolute
+            font-size: 54px
+            font-family: 'Rubik', sans-serif
+            color: #D4C17F
+            opacity: 0.3
+            bottom: 40px
+    &:nth-child(4)
+        width: 238px
+        p
+            padding-left: 16px
+        &::before
+            content: '04'
+            position: absolute
+            font-size: 54px
+            font-family: 'Rubik', sans-serif
+            color: #D4C17F
+            opacity: 0.3
+            bottom: 40px
+.footer-bg
+    background-color: #2E353D
+    padding: 40px 0
+    margin-top: 150px
+.footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+.rights-reserved
+    text-align: center
+    color: #ADADAD
+.footer-menu
+    display: flex
+    flex-wrap: wrap
+    max-width: 307px
+    a
+        width: 50%
+        color: #fff
+        margin-bottom: 10px
+.footer-contacts
+    span
+        color: #D4C17F
+        font-weight: bold
+    .footer-social-networks
+        img
+            max-width: 30
+            height: 30px
+            margin-right: 25px
+.autorization-form, .forget-form
+    position: fixed
+    display: flex
+    overflow: hidden
+    justify-content: flex-start
+    max-width: 420px
+    border: 2px solid #D4C17F
+    border-radius: 10px
+    flex-direction: column
+    padding: 35px 30px
+    color: #909090
+    top: 200px
+    margin: 0 auto
+    right: 0
+    left: 0
+    transition: opacity 0.3s
+    z-index: 999
+    background-color: #242B33
+    animation-name: openmodal
+    animation-duration: 0.3s
+    .title
+        color: #fff
+        font-size: 36px
+        margin: 68px 0 50px 0
+    span
+        font-size: 14px
+        color: tomato
+    img
+        position: absolute
+        top: -2px
+        margin: 0 auto
+        right: 0
+        left: 0
+        width: 103%
+    input
+        background-color: transparent
+        border-bottom: 2px solid #909090
+        padding: 10px 10px 10px 0
+        margin-bottom: 20px
+        transition: 0.5s
+    a
+        text-decoration: underline
+        color: #909090
+        font-weight: bold
+        max-width: 141px
+        margin: auto
+        &:last-child
+            max-width: 
+            font-size: 14px
+            margin-top: 65px
+            max-width: 212px
+    .autorization-button, .forget-button
+        max-width: 200px
+        padding: 15px 30px
+        background-color: transparent
+        margin: 0 auto
+        position: relative
+        color: #fff
+        cursor: pointer
+        font-weight: bold
+        overflow: hidden
+        transition: 0.8s
+        margin-top: 50px
+        text-decoration: none
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 20px
+            height: 20px
+            border-top: 2px solid #D4C17F
+            border-left: 2px solid #D4C17F
+            transition: 0.8s
+        &::after
+            content: ''
+            position: absolute
+            bottom: 0
+            right: 0
+            width: 20px
+            height: 20px
+            border-bottom: 2px solid #D4C17F
+            border-right: 2px solid #D4C17F
+            transition: 0.8s
+        &:hover
+            box-shadow: 0px 0px 20px #D4C17F
+            transition-delay: 0.6s
+            &::before, &::after
+                width: 100%
+                height: 100%
+.forget-form
+    animation-duration: 0s
+    height: 477px
+.form-bg
+    content: ''
+    width: 100%
+    height: 100%
+    background-color: rgb(29, 28, 28)
+    position: fixed
+    opacity: .7
+    z-index: 12
+    animation-name: openbg
+    animation-duration: 0.3s
+.forget-successfully
+    max-width: 559px
+    text-align: center
+    padding: 30px 27px
+    border: 2px solid #D4C17F
+    border-radius: 10px
+    background-color: #242B33
+    margin: 0 auto
+    position: absolute
+    top: 400px
+    left: 0
+    right: 0
+    z-index: 14
+    span
+        font-size: 16px
+        color: #BBBBBB
+    .title
+        margin: 0 0 18px 0
+        font-size: 30px
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+@keyframes openbg
+    from{opacity: 0}
+    to{opacity: .7}  
+@keyframes openmodal
+    from{opacity: 0}
+    to{opacity: 1}
+.hidden
+    opacity: 0
+    z-index: -1
+.back
+    background-color: #fff
+    padding: 10px
+// privacypolicy section
+.privacy-info
+    line-height: 125%
+// questions page
+.accordion-container
+    max-width: 800px
+.accordion-link
+    color: #fff
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border: 2px solid #D4C17F
+    padding: 20px
+    font-weight: bold
+    img
+        transition: all 600ms
+.answer
+    max-height: 0
+    overflow: hidden
+    background-color: #2E353D
+    transition: max-height 1200ms
+    line-height: 150%
+    span
+        font-weight: bold
+        color: #D4C17F
+        display: flex
+        margin-bottom: 40px
+        margin-top: 20px
+        &:first-child
+            margin-top: 0
+            margin-bottom: 0
+    p
+        padding: 20px
+        margin: 0
+.accordion-item
+    padding-bottom: 20px
+    &:target .answer
+        max-height: 85rem
+    &:target .accordion-link img
+        transform: rotate(180deg)
+// about-company
+.about-company-info
+    max-width: 800px
+    line-height: 125%
+// slickSlider
+.slick-track
+    display: flex
+.slick-list
+    overflow: hidden
+.slick-dots
+    display: flex
+    margin: 18px auto
+    padding: 0
+    .slick-active
+        background-color: #fff
+        transition: 500ms
+    li
+        font-size: 0
+        border: 1px solid #fff
+        border-radius: 50%
+        width: 16px
+        height: 16px
+        margin-right: 10px
+        cursor: pointer
+        &:last-child
+            margin-right: 0
+        &:first-child
+            padding: 0
+        button
+            display: none
+// personal-room
+.personal-wrapper
+    display: flex
+    justify-content: space-between
+.main-information
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+.personal-info, .count-tariff
+    p
+        &:first-child
+            font-size: 30px
+            margin: 0 0 55px
+    a
+        text-decoration: underline
+.personal-form
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    max-width: 627px
+    justify-content: space-between
+    input, a
+        width: 45%
+        padding: 17px 12px
+        background-color: transparent
+        border: 1px solid #fff
+        margin-top: 20px
+    a
+        text-align: center
+        border: 2px solid #D4C17F
+        cursor: pointer
+        text-transform: uppercase
+        letter-spacing: 0.08em
+        padding: 16px 12px
+    p
+        margin: 20px auto
+.count-tariff .offer-card
+    width: 100%
+    margin: 0
+// application-for-connection
+.application-form
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    max-width: 1000px
+    input
+        width: 45%
+    textarea
+        width: 100%
+        padding: 0
+    input, textarea
+        padding: 17px 19px
+        background-color: transparent
+        border: 1px solid #fff
+        margin-top: 20px
+    a
+        text-transform: uppercase
+        letter-spacing: 0.08em
+        border: 2px solid #D4C17F
+        text-align: center
+        padding: 18px 88px
+        margin: 20px auto
+    p
+        margin: 0 auto
+        text-align: center
+// media
+@media (max-width:1680px)
+    
+@media (max-width:1440px)
+    
+@media (max-width:1366px)
+    
+@media (max-width:1280px)
+    
+@media (max-width:1024px)
+    .offer-card
+        margin: 5px 10px 12px
+        img
+            max-height: 210px
+    .menu-list
+        overflow: hidden
+        transition: .5s
+        right: 0
+        top: 0
+        transform: translateX(100%)
+        position: fixed
+        width: 25%
+        justify-content: flex-start
+        flex-direction: column
+        background-color: #2E353D
+        z-index: 10
+        height: 100vh
+        a
+            margin: 10px 15px
+            &:first-child
+                margin-top: 120px
+
+            &:last-child
+                margin-bottom: 30px
+        a + a
+            margin-left: 15px
+    .burger-label
+        background: url(../img/menu-bar.svg) no-repeat
+        width: 30px
+        height: 25px
+        display: flex
+        z-index: 11
+        transition: .5s
+    #burger-icon
+        &:checked
+            ~ .menu-list
+                transform: translateX(0%)
+            ~ .burger-label
+                background: url(../img/close-menu-bar.svg) no-repeat
+                width: 30px
+                height: 25px
+                position: fixed
+                right: 10px
+    .header-info__block
+        margin-top: 90px
+    .footer-menu
+        flex-direction: column
+        a
+            width: 100%
+    .rights-reserved
+        margin-top: 10px
+    .how-work-list
+        justify-content: space-between
+        flex-wrap: wrap
+    .autorization-form
+        top: 76px
+@media (max-width:768px)
+    .offer-card
+        margin: 5px 140px 12px
+    .header-info
+        .title
+            font-size: 64px
+    .line
+        margin: 0 15px 0 15px
+    .application-form
+        input
+            width: 60%
+@media (max-width:420px)
+    .offer-card
+        margin: 5px 10px 12px
+    .header-info
+        .title
+            font-size: 32px
+        .subtitle
+            font-size: 20px
+    .social-networks
+        height: 368px
+        img
+            width: 32px
+            height: 32px
+    .line
+        height: 368px
+    .title
+        font-size: 40px
+        margin-top: 70px
+        margin-bottom: 50px
+    .header-info__block
+        .mouse-down
+            display: none
+    .advantage-list
+        flex-wrap: wrap
+    .advantage
+        align-items: center
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 0
+    .how-work-list
+        align-items: center
+    .footer
+        flex-wrap: wrap
+    .footer-menu
+        margin-top: 20px
+    .rights-reserved
+        margin-top: 20px
+    .menu-list
+        width: 55%
+    .application-form
+        input
+            width: 100%
+    .footer-bg
+        margin-top: 90px
+@media (max-width:320px)
+    body
+        font-size: 16px
+    .social-networks, .line
+        display: none
+    .header-info
+        .title
+            font-size: 30px
+        .subtitle
+            font-size: 16px
+    .title
+        font-size: 30px
+    .how-work-card
+        font-size: 20px
+    .offer-card
+        padding-bottom: 10px
+        img
+            max-height: 130px
+    .offer-card__info
+        padding: 0 10px
+    .offer-button
+        padding: 18px 54px
+        display: flex
+        margin: 30px auto
+        margin-bottom: 10px
+    .slick-dots
+        margin: 8px auto
+    .logo
+        font-size: 20px
+        img
+            width: 48px
+            height: 48px
+            margin-right: 10px
+    .header-info__block
+        margin-top: 50px
+        height: 100vh
+    .autorization-form
+        top: 40px
+        .autorization-button
+            margin-top: 30px
+        .title
+            margin: 48px 0 30px 0
+        a
+            &:last-child
+                margin-top: 30px
+        
